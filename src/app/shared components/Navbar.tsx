@@ -7,6 +7,12 @@ import { components } from "@/src/app/data/Navbar";
 import { primitives } from "@/src/app/data/Navbar";
 
 import {
+  CircleAlertIcon,
+  CircleCheckIcon,
+  CircleDashedIcon,
+} from "lucide-react";
+
+import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
