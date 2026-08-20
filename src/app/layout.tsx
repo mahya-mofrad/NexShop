@@ -1,8 +1,8 @@
 import "./globals.css";
 import { Geist } from "next/font/google";
 import { cn } from "@/src/lib/utils";
-import Footer from "./component/Footer";
-import Navbar from "./component/Navbar";
+import Footer from "@/src/components/shared components/Footer";
+import Navbar from "@/src/components/shared components/Navbar";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
