@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 import { components } from "@/src/app/data/Navbar";
 import { primitives } from "@/src/app/data/Navbar";
@@ -16,66 +17,73 @@ import {
   navigationMenuTriggerStyle,
 } from "@/src/components/ui/navigation-menu";
 
+import Logo from "../../../public/nexShopLOGO.png";
+
 export default function Navbar() {
   return (
-    <NavigationMenu>
-      <NavigationMenuList>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="w-96">
-              {primitives.map((primitive) => (
-                <ListItem
-                  key={primitive.title}
-                  title={primitive.title}
-                  href={primitive.href}
-                >
-                  {primitive.description}
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem className="hidden md:flex">
-          <NavigationMenuTrigger>Components</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-              {components.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
-                >
-                  {component.description}
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>With Icon</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[200px] ">
-              {components.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
-                >
-                  {component.description}
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuLink
-            className={navigationMenuTriggerStyle()}
-            render={<Link href="/docs">Docs</Link>}
-          />
-        </NavigationMenuItem>
-      </NavigationMenuList>
-    </NavigationMenu>
+    <nav className="flex items-center justify-between w-full py-2">
+      <div className="flex-shrink-0 w-10"></div>
+
+      {/* menu */}
+      <NavigationMenu>
+        <NavigationMenuList className="flex items-center justify-center gap-2">
+          <NavigationMenuItem>
+            <NavigationMenuTrigger>دسته بندی محصولات</NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul className="w-96">
+                {primitives.map((primitive) => (
+                  <ListItem
+                    key={primitive.title}
+                    title={primitive.title}
+                    href={primitive.href}
+                  >
+                    {primitive.description}
+                  </ListItem>
+                ))}
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+
+          <NavigationMenuItem className="hidden md:flex">
+            <NavigationMenuTrigger>برندها</NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                {components.map((component) => (
+                  <ListItem
+                    key={component.title}
+                    title={component.title}
+                    href={component.href}
+                  >
+                    {component.description}
+                  </ListItem>
+                ))}
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+
+          <NavigationMenuItem>
+            <NavigationMenuLink
+              className={navigationMenuTriggerStyle()}
+              render={<Link href="/about">درباره ما</Link>}
+            />
+          </NavigationMenuItem>
+
+          <NavigationMenuItem>
+            <NavigationMenuLink
+              className={navigationMenuTriggerStyle()}
+              render={<Link href="/contact">تماس با ما</Link>}
+            />
+          </NavigationMenuItem>
+        </NavigationMenuList>
+      </NavigationMenu>
+
+      {/* logo */}
+      <div className="flex-shrink-0">
+        <Link href="/" className="flex items-center gap-2">
+          <Image src={Logo} alt="NexShop Logo" className="h-20 w-auto" />
+        </Link>
+      </div>
+    </nav>
   );
 }
 

@@ -10,8 +10,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fa" dir="rtl" className={cn("font-sans", geist.variable)}>
       <body>
-        <main className="flex min-h-screen flex-col p-4">
-          <div className="h-1/5 w-full flex flex-col items-center">
+        <main className="flex min-h-screen flex-col">
+          <div className="h-1/5 w-full flex flex-col items-center py-4">
             <Navbar />
           </div>
 
