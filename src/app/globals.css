@@ -120,8 +120,15 @@
   * {
     @apply border-border outline-ring/50;
   }
+  root {
+    @apply text-base;
+
+    --font-fa: var(--font-fa), sans-serif;
+    --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+  }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-fa);
   }
   html {
     @apply font-sans;
