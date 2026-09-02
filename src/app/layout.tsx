@@ -37,7 +37,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           enableSystem
           disableTransitionOnChange
         >
-          <main className="flex min-h-screen flex-col">
+          <main className="flex min-h-screen flex-col items-center justify-between">
             <div className="h-1/5 w-full flex flex-col items-center py-4">
               <Navbar />
             </div>
