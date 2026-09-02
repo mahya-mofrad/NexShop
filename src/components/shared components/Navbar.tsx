@@ -31,7 +31,9 @@ export default function Navbar() {
       <NavigationMenu>
         <NavigationMenuList className="flex items-center justify-center gap-2">
           <NavigationMenuItem>
-            <NavigationMenuTrigger>دسته بندی محصولات</NavigationMenuTrigger>
+            <NavigationMenuTrigger className={"font-light gap-2"}>
+              دسته بندی محصولات
+            </NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="w-96">
                 {primitives.map((primitive) => (
@@ -48,7 +50,9 @@ export default function Navbar() {
           </NavigationMenuItem>
 
           <NavigationMenuItem className="hidden md:flex">
-            <NavigationMenuTrigger>برندها</NavigationMenuTrigger>
+            <NavigationMenuTrigger className={"font-light gap-2"}>
+              برندها
+            </NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                 {components.map((component) => (
@@ -66,14 +70,14 @@ export default function Navbar() {
 
           <NavigationMenuItem>
             <NavigationMenuLink
-              className={navigationMenuTriggerStyle()}
+              className={`${navigationMenuTriggerStyle()} font-light`}
               render={<Link href="/about">درباره ما</Link>}
             />
           </NavigationMenuItem>
 
           <NavigationMenuItem>
             <NavigationMenuLink
-              className={navigationMenuTriggerStyle()}
+              className={`${navigationMenuTriggerStyle()} font-light`}
               render={<Link href="/contact">تماس با ما</Link>}
             />
           </NavigationMenuItem>
