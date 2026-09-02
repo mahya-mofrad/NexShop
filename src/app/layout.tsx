@@ -2,6 +2,7 @@ import "./globals.css";
 import localFont from "next/font/local";
 import Footer from "@/src/components/shared components/Footer";
 import Navbar from "@/src/components/shared components/Navbar";
+import { ThemeProvider } from "../components/theme-provider";
 
 const yekanBakh = localFont({
   src: [
@@ -30,15 +31,22 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fa" dir="rtl" className={yekanBakh.variable}>
       <body className="font-[var(--font-fa)]">
-        <main className="flex min-h-screen flex-col">
-          <div className="h-1/5 w-full flex flex-col items-center py-4">
-            <Navbar />
-          </div>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <main className="flex min-h-screen flex-col">
+            <div className="h-1/5 w-full flex flex-col items-center py-4">
+              <Navbar />
+            </div>
 
-          {children}
+            {children}
 
-          <Footer />
-        </main>
+            <Footer />
+          </main>
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -18,11 +18,14 @@ import {
 } from "@/src/components/ui/navigation-menu";
 
 import Logo from "../../../public/nexShopLOGO.png";
+import { ModeToggle } from "../features/moodToggle";
 
 export default function Navbar() {
   return (
     <nav className="flex items-center justify-between w-full py-2">
-      <div className="flex-shrink-0 w-10"></div>
+      <div className="flex-shrink-0 w-10 pr-4">
+        <ModeToggle />
+      </div>
 
       {/* menu */}
       <NavigationMenu>
