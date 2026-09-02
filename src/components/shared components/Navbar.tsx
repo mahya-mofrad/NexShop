@@ -83,7 +83,7 @@ export default function Navbar() {
       {/* logo */}
       <div className="flex-shrink-0">
         <Link href="/" className="flex items-center gap-2">
-          <Image src={Logo} alt="NexShop Logo" className="h-20 w-auto" />
+          <Image src={Logo} alt="NexShop Logo" className="h-14 w-auto" />
         </Link>
       </div>
     </nav>
