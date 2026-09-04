@@ -46,6 +46,7 @@
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
   --color-footer-bg: var(--footer-bg);
+  --color-icon-color: var(--icon-color);
 }
 
 :root {
@@ -82,6 +83,7 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
   --footer-bg: oklch(85.22% 0.02468 46.929);
+  --icon-color: oklch(18.71% 0.0066 17.582);
 }
 
 .dark {
@@ -117,6 +119,7 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
   --footer-bg: oklch(85.22% 0.02468 46.929);
+  --icon-color: oklch(18.71% 0.0066 17.582);
 }
 
 @layer base {
