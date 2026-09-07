@@ -5,8 +5,8 @@ import { Gift, Phone, Tag, Truck } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="w-full grid grid-flow-col justify-around items-center bg-footer-bg p-10">
-      <div className="grid-cols-4">
+    <footer className="w-full grid grid-flow-row md:grid-flow-col justify-around items-center bg-footer-bg p-6 md:p-10">
+      <div className="mb-10 md:mb-0 md:grid-cols-4 ">
         <div className="flex items-center gap-2 text-sm md:gap-4">
           <div className="flex flex-col gap-1">
             <span className="font-medium text-amber-950">tel</span>
@@ -21,11 +21,8 @@ export default function Footer() {
               </Link>
             </span>
           </div>
-          <Separator
-            orientation="vertical"
-            className="hidden md:block bg-muted-foreground"
-          />
-          <div className="hidden flex-col gap-1 md:flex">
+          <Separator orientation="vertical" className="bg-muted-foreground" />
+          <div className=" flex-col gap-1 md:flex">
             <span className="font-medium text-amber-950">Social Media</span>
             <span className="flex gap-3 text-xs text-icon-color">
               <Link
@@ -44,9 +41,9 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="grid-cols-8">
+      <div className="md:grid-cols-8">
         <div className="flex items-center gap-2 text-sm md:gap-4">
-          <div className="hidden flex-col items-center gap-1 md:flex">
+          <div className="flex-col items-center gap-1 md:flex">
             <span className="text-icon-color rotate-90">
               <Tag className="size-12 stroke-1" />
             </span>
@@ -55,7 +52,7 @@ export default function Footer() {
             </span>
           </div>
           <Separator orientation="vertical" className="bg-muted-foreground" />
-          <div className="hidden flex-col items-center gap-1 md:flex">
+          <div className="flex-col items-center gap-1 md:flex">
             <span className="text-icon-color">
               <Gift className="size-12 stroke-1" />
             </span>
@@ -63,11 +60,8 @@ export default function Footer() {
               هدیه تولد
             </span>
           </div>
-          <Separator
-            orientation="vertical"
-            className="hidden md:block bg-muted-foreground"
-          />
-          <div className="hidden flex-col items-center gap-1 md:flex">
+          <Separator orientation="vertical" className="bg-muted-foreground" />
+          <div className="flex-col items-center gap-1 md:flex">
             <span className="text-icon-color">
               <Truck className="size-12 stroke-1" />
             </span>
