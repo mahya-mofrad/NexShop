@@ -17,7 +17,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/src/components/ui/navigation-menu";
 
-import Logo from "../../../public/nexShopLOGO.png";
+import Logo from "@/public/images/nexShopLOGO.png";
 import { ModeToggle } from "../features/moodToggle";
 
 export default function Navbar() {
@@ -49,7 +49,7 @@ export default function Navbar() {
             </NavigationMenuContent>
           </NavigationMenuItem>
 
-          <NavigationMenuItem className="hidden md:flex">
+          <NavigationMenuItem className="flex">
             <NavigationMenuTrigger className={"font-light gap-2"}>
               برندها
             </NavigationMenuTrigger>
