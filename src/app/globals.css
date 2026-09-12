@@ -134,9 +134,12 @@
   }
   body {
     @apply bg-background text-foreground;
+    margin: 0;
+    padding: 0;
     font-family: var(--font-fa);
   }
   html {
     @apply font-sans;
+    overflow-x: hidden;
   }
 }

@@ -3,10 +3,9 @@
 import * as React from "react";
 import Autoplay from "embla-carousel-autoplay";
 
-import bannerItem1 from "@/public/images/banner.png";
-import bannerItem2 from "@/public/images/ChatGPT Image Aug 15, 2026, 05_17_40 PM.png";
+import bannerItem1 from "@/public/images/ChatGPT Image Sep 12, 2026, 11_28_06 PM.png";
+import bannerItem2 from "@/public/images/ChatGPT Image Sep 12, 2026, 10_45_25 PM.png";
 import bannerItem3 from "@/public/images/ChatGPT Image Sep 11, 2026, 10_07_35 PM.png";
-import bannerItem4 from "@/public/images/ChatGPT Image Sep 11, 2026, 10_10_12 PM.png";
 
 import {
   Carousel,
@@ -31,18 +30,16 @@ export default function CarouselPlugin() {
       className="w-screen"
     >
       <CarouselContent>
-        {Array.from({ length: 4 }).map((_, index) => (
+        {Array.from({ length: 3 }).map((_, index) => (
           <CarouselItem key={index}>
-            <div className="relative min-w-screen h-[43.333vh] overflow-hidden">
+            <div className="relative min-w-screen h-[90vh] overflow-hidden">
               <Image
                 src={
                   index === 0
-                    ? bannerItem3
+                    ? bannerItem1
                     : index === 1
                       ? bannerItem2
-                      : index === 2
-                        ? bannerItem4
-                        : bannerItem1
+                      : bannerItem3
                 }
                 alt={`Banner ${index + 1}`}
                 sizes="100vw"
